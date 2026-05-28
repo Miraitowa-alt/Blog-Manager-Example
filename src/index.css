@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rts-bg: #0a0a0c;       /* 极黑 */
+  --color-rts-panel: #121215;    /* 深灰面板 */
+  --color-rts-border: #1f2026;   /* 锐利边框 */
+  --color-rts-text: #e3e4e6;     /* 银白 */
+  --color-rts-mute: #62656c;     /* 黯淡文字 */
+  --color-rts-accent: #3b82f6;   /* 科技蓝 */
+}
+
+body {
+  background-color: #0a0a0c;
+  color: #e3e4e6;
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+}

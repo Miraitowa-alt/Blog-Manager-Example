@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0c" />
+      <stop offset="100%" stop-color="#121215" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bg)" />
+  <rect width="1280" height="640" fill="url(#glow)" />
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="80" height="640" fill="#121215" rx="0" />
+  <rect x="80" y="0" width="1" height="640" fill="#1f2026" />
+  <!-- Sidebar logo -->
+  <rect x="24" y="24" width="32" height="32" rx="8" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-opacity="0.3" stroke-width="1" />
+  <text x="40" y="46" text-anchor="middle" fill="#3b82f6" font-family="system-ui" font-weight="bold" font-size="12">CMS</text>
+  <!-- Sidebar nav icons -->
+  <circle cx="40" cy="100" r="8" fill="#3b82f6" />
+  <circle cx="40" cy="130" r="8" fill="#1f2026" />
+  <circle cx="40" cy="160" r="8" fill="#1f2026" />
+  <!-- Status dot -->
+  <circle cx="40" cy="600" r="5" fill="#10b981" />
+
+  <!-- Top bar -->
+  <rect x="80" y="0" width="1200" height="56" fill="#121215" fill-opacity="0.5" rx="0" />
+  <rect x="80" y="56" width="1200" height="1" fill="#1f2026" />
+  <text x="120" y="36" fill="#e3e4e6" font-family="system-ui" font-weight="600" font-size="13" letter-spacing="1">Content Editor / 新建文章</text>
+  <!-- Sync button -->
+  <rect x="1110" y="14" width="120" height="28" rx="6" fill="#3b82f6" />
+  <text x="1170" y="33" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="500">🚀 一键同步</text>
+
+  <!-- Main content -->
+  <text x="120" y="110" fill="#e3e4e6" font-family="system-ui" font-size="15" font-weight="500">Markdown Editor — Real-time Preview</text>
+  <text x="120" y="130" fill="#62656c" font-family="system-ui" font-size="12">Write in Markdown, see the rendered result instantly</text>
+
+  <!-- Editor panel -->
+  <rect x="120" y="160" width="700" height="420" rx="8" fill="#121215" stroke="#1f2026" stroke-width="1" />
+  <!-- Title input -->
+  <rect x="140" y="180" width="660" height="40" rx="6" fill="#0a0a0c" stroke="#1f2026" stroke-width="1" />
+  <text x="150" y="206" fill="#62656c" font-family="system-ui" font-size="13">请输入文章标题...</text>
+  <!-- Toolbar -->
+  <rect x="140" y="230" width="120" height="30" rx="6" fill="#121215" stroke="#1f2026" stroke-width="1" />
+  <rect x="140" y="230" width="56" height="30" rx="6" fill="#3b82f6" />
+  <text x="168" y="249" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="500">编辑</text>
+  <text x="208" y="249" text-anchor="middle" fill="#62656c" font-family="system-ui" font-size="11">预览</text>
+  <!-- Text area -->
+  <rect x="140" y="270" width="660" height="290" rx="6" fill="#121215" stroke="#1f2026" stroke-width="1" />
+  <!-- Mock markdown lines -->
+  <text x="155" y="295" fill="#3b82f6" font-family="monospace" font-size="12"># Blog Manager</text>
+  <text x="155" y="318" fill="#e3e4e6" font-family="monospace" font-size="11">A Tauri-based desktop blog CMS for Astro / Next.js.</text>
+  <rect x="155" y="325" width="420" height="1" fill="#1f2026" />
+  <text x="155" y="345" fill="#34d399" font-family="monospace" font-size="11">## Features</text>
+  <text x="175" y="365" fill="#e3e4e6" font-family="monospace" font-size="11">- Markdown editor with live preview</text>
+  <text x="175" y="383" fill="#e3e4e6" font-family="monospace" font-size="11">- One-click GitHub sync</text>
+  <text x="175" y="401" fill="#e3e4e6" font-family="monospace" font-size="11">- Cover image management</text>
+  <text x="155" y="425" fill="#34d399" font-family="monospace" font-size="11">## Quick Start</text>
+  <text x="175" y="445" fill="#e3e4e6" font-family="monospace" font-size="11">1. Configure your GitHub PAT</text>
+  <text x="175" y="463" fill="#e3e4e6" font-family="monospace" font-size="11">2. Write your article</text>
+  <text x="175" y="481" fill="#34d399" font-family="monospace" font-size="11">3. Click sync to publish</text>
+  <rect x="155" y="490" width="360" height="1" fill="#1f2026" />
+  <text x="155" y="510" fill="#62656c" font-family="monospace" font-size="11">```typescript</text>
+  <text x="155" y="528" fill="#34d399" font-family="monospace" font-size="11">const handleSync = async () => {</text>
+  <text x="175" y="546" fill="#e3e4e6" font-family="monospace" font-size="11">const tree = await createTree(...);</text>
+
+  <!-- Right panel -->
+  <rect x="850" y="160" width="320" height="180" rx="8" fill="#121215" stroke="#1f2026" stroke-width="1" />
+  <text x="870" y="185" fill="#62656c" font-family="system-ui" font-weight="600" font-size="11" letter-spacing="1">文章封面图</text>
+  <!-- Image upload area -->
+  <rect x="865" y="195" width="290" height="120" rx="6" fill="#0a0a0c" stroke="#1f2026" stroke-dasharray="4,3" stroke-width="1" />
+  <text x="1010" y="248" text-anchor="middle" fill="#62656c" font-family="system-ui" font-size="24">🖼️</text>
+  <text x="1010" y="270" text-anchor="middle" fill="#62656c" font-family="system-ui" font-size="11">拖拽 / 点击 / Ctrl+V 上传</text>
+
+  <!-- Advanced settings -->
+  <rect x="850" y="355" width="320" height="42" rx="8" fill="#121215" stroke="#1f2026" stroke-width="1" />
+  <text x="870" y="380" fill="#62656c" font-family="system-ui" font-weight="600" font-size="11" letter-spacing="1">高级设置</text>
+  <path d="M1130 370 L1140 380 L1150 370" fill="none" stroke="#62656c" stroke-width="1.5" />
+
+  <!-- Log panel -->
+  <rect x="850" y="412" width="320" height="168" rx="8" fill="#121215" stroke="#1f2026" stroke-width="1" />
+  <text x="870" y="437" fill="#62656c" font-family="system-ui" font-weight="600" font-size="11" letter-spacing="1">控制台实时日志</text>
+  <rect x="865" y="450" width="290" height="112" rx="6" fill="#0a0a0c" stroke="#1f2026" stroke-width="1" />
+  <text x="880" y="472" fill="#62656c" font-family="monospace" font-size="11" font-style="italic">暂无同步任务...</text>
+
+  <!-- Bottom footer -->
+  <text x="640" y="620" text-anchor="middle" fill="#62656c" font-family="system-ui" font-size="11">Built with Tauri v2 · React 19 · Vite 8 · Tailwind CSS v4</text>
+</svg>

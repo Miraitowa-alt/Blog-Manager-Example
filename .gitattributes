@@ -1,0 +1,28 @@
+# Auto-detect line endings
+* text=auto
+
+# Source code
+*.ts       text diff=typescript
+*.tsx      text diff=typescript
+*.js       text
+*.jsx      text
+*.json     text
+*.css      text
+*.html     text
+*.md       text
+
+# Rust
+*.rs       text diff=rust
+*.toml     text
+
+# Config
+*.yml      text
+*.yaml     text
+*.config.* text
+
+# Binaries / images
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.ico      binary
+*.icns     binary
