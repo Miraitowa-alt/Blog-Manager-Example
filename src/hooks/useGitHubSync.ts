@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import type {
   GitRefResponse,
   GitCommitResponse,
@@ -102,8 +102,8 @@ export function useGitHubSync() {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
 
   // Track last-saved snapshot for derived dirty detection
-  const lastSavedRef = useRef({ title: '', content: '' });
-  const isDirty = title !== lastSavedRef.current.title || content !== lastSavedRef.current.content;
+  const [lastSaved, setLastSaved] = useState({ title: '', content: '' });
+  const isDirty = title !== lastSaved.title || content !== lastSaved.content;
 
   // Frontmatter
   const [author, setAuthor] = useState("Admin");
@@ -141,7 +141,7 @@ export function useGitHubSync() {
   const saveDraftNow = useCallback(() => {
     saveDraftToLS({ title, content, author, category, tags, description, publishDate });
     setHasDraft(true);
-    lastSavedRef.current = { title, content };
+    setLastSaved({ title, content });
     setSaveIndicator(true);
     setTimeout(() => setSaveIndicator(false), 2000);
   }, [title, content, author, category, tags, description, publishDate]);
@@ -157,7 +157,7 @@ export function useGitHubSync() {
     const timer = setTimeout(() => {
       saveDraftToLS({ title, content, author, category, tags, description, publishDate });
       setHasDraft(true);
-      lastSavedRef.current = { title, content };
+      setLastSaved({ title, content });
     }, 2000);
     return () => clearTimeout(timer);
   }, [title, content, author, category, tags, description, publishDate]);
@@ -405,7 +405,7 @@ export function useGitHubSync() {
     setImagePreview(null); setAuthor("Admin"); setCategory("");
     setTags(""); setDescription(""); setPublishDate(todayStr());
     clearDraftFromLS(); setHasDraft(false);
-    lastSavedRef.current = { title: '', content: '' };
+    setLastSaved({ title: '', content: '' });
   };
 
   return {
